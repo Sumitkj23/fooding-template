@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food Delivery System | MyMeal.com</title>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<style type="text/css">
+		
+		*
+		{
+			margin: 0px;
+		}
+
+		html
+		{
+			scroll-behavior: smooth;
+		}
+										/*navbar start here*/
+		#navbar
+		{
+			display: flex;
+			align-items: center;
+			position: relative;
+			/*top: 0px;*/
+		}
+
+		#navbar::before
+		{
+			content: "";
+			background-color: black;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			opacity: .6;
+		}
+		#logo
+		{
+			margin: 15px 20px;
+		}
+		#loImg
+		{
+			height: 70px;
+			width: 70px;
+			border-radius: 50px;
+		}
+
+		#navbar ul
+		{
+			display: flex; 
+		}
+		.item
+		{
+			list-style: none;
+			font-size: 1.2em;
+			margin: 0px 13px;
+		}
+		#navbar .item a
+		{
+			text-decoration: none;
+			display: block;
+			padding: 3px 8px;
+			color: white;
+			border-radius: 8px;
+		}
+
+		#navbar .item a:hover
+		{
+			color: black;
+			background-color: grey;
+		}
+
+										/*navbar end here*/
+
+
+										/*utility class*/
+		.h-primary
+		{
+			font-size: 2.8rem;
+			padding: 15px;
+
+		}
+		.h-secondary
+		{
+			font-size: 1.9rem;
+			padding: 15px;
+
+		}
+
+		.btn
+		{
+			padding: 5px 9px;
+			background-color: brown;
+			color: white;
+			border: 2px solid white;
+			margin: 12px;
+			font-size: 1.2rem;
+			border-radius: 8px;
+		}
+		.btn:hover
+		{
+			cursor: pointer;
+			background-color: #d81919;
+		}
+
+
+										/*home section start here*/
+		#home
+		{
+			display: flex;
+			flex-direction: column;
+			padding: 8px 200px;
+			justify-content: center;
+			align-items: center;
+			height: 280px;
+		}
+
+		#home::before
+		{
+			content: "";
+			background: url("img/img6.jpg") no-repeat center center/cover;
+			position: absolute;
+			width: 100%;
+			height: 500px;
+			z-index: -1;
+			opacity: .78;
+			top: 0px;
+		}
+
+		#home h1
+		{
+			text-align: center;
+			color: white;
+			text-shadow: 3px 4px grey;
+			font-weight: normal;
+		}
+
+		#home p
+		{
+			text-align: center;
+			<!-- color: white; -->
+			color: black;
+			font-size: 1.3rem;
+		}
+
+
+										/*home section ends here*/
+
+
+
+										/*services section starts here*/
+		
+
+		#services
+		{
+			margin-top: 120px;
+		}
+
+		.service
+		{
+			display: flex;
+			margin: 5px 10px;
+			/*height: 500px;*/
+		}
+		.service .box
+		{
+			border: 2px solid red;
+			/*width: 400px;*/
+			padding: 15px 12px;
+			margin: 2px 15px;
+			border-radius: 20px;
+			background-color: #e8c6c6;
+		}
+		.service .box img
+		{
+			height: 180px;
+			margin: auto;
+			display: block;
+			/*width: 350px;*/
+		}
+		.service .box h2
+		{
+			text-align: center;
+		}
+		.service .box p
+		{
+			text-align: center;
+		}
+
+										/*services section ends here*/
+
+
+
+
+										/*<!-- client section start here -->*/
+
+		#client-section
+		{
+			margin-top: 25px;
+			height: 300px;
+			padding-top: 15px;
+		}
+		#client-section::before
+		{
+			content: "";
+			background: url("img/img6.jpg") no-repeat center/cover;
+			position: absolute;
+			width: 100%;
+			height: 270px;
+			z-index: -1;
+			opacity: .53;
+		}
+
+		#client-section h2
+		{
+			text-align: center;
+		}
+
+		#clients
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#clients img
+		{
+			height: 100px;
+		}
+
+		.client-item
+		{
+			padding: 34px;
+		}
+
+		
+										/*<!-- client section ends here-->*/
+
+
+										/*contact section start here*/
+
+		#contact
+		{
+			position: relative;
+		}
+		#contact::before
+		{
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			opacity: 0.6;
+			background: url("img/img3.jpg") no-repeat center center/cover;
+		}
+										
+										/*contact section start here*/
+
+		
+		.contact-box
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+		}
+		.contact-box form
+		{
+			width: 35%;
+		}
+		.contact-box label
+		{
+			font-size: 1.3rem;
+		}
+		.contact-box input, textarea
+		{
+			width: 100%;
+			padding: .3rem;
+			border-radius: 9px;
+			font-size: 1rem;
+			margin-bottom: 10px;
+		}
+
+										/*contact section ends here*/
+
+
+										/*footer start here*/
+		footer
+		{
+			text-align: center;
+			background-color: black;
+			color: white;
+			padding: 15px 5px;
+		}
+										/*footer ends here*/
+
+
+
+
+										/*responsive code start here*/
+
+	@media screen and (max-width: 1000px)
+	{
+		#navbar
+		{
+			flex-direction: column;
+		}
+		#navbar .item a
+		{
+			font-size: 1rem;
+			padding: 3px 6px;
+			margin-bottom: 8px;
+		}
+		#navbar ul
+		{
+			padding: 0px;
+		}
+
+
+		#home
+		{
+			height: 150px;
+			padding: 27px 55px;
+		}
+		#home::before
+		{
+			height: 370px;
+		}
+		#home p
+		{
+			font-size: 0.9rem;
+		}
+
+
+		.service
+		{
+			flex-direction: column;
+		}
+
+		#services
+		{
+			margin-top: 45px;
+		}
+		.service .box
+		{ 
+		    margin-top: 1px;
+		    margin-bottom: 10px;
+		    margin-left: 15px;
+		    margin-right: 15px;
+		}
+		.service .box img
+		{
+			height: 110px;
+		}
+
+
+		#clients
+		{
+			flex-wrap: wrap;
+		}
+		#clients img
+		{
+			width: 100px;
+			padding: 5px;
+		}
+		.client-item
+		{
+			padding: 5px
+		}
+		#client-section
+		{
+			height: 342px;
+			margin-top: 20px;
+		}
+		#client-section::before
+		{
+			height: 322px;
+		}
+
+		.contact-box form
+		{
+			width: 250px;
+		}
+
+
+		.h-primary
+		{
+			font-size: 1.7rem;
+		}
+		.btn
+		{
+			font-size: .8rem;
+		}
+
+	}
+
+	@media only screen and (min-width: 480px) and (max-width: 1000px)
+	{
+		.service .box img
+		{
+			height: 150px;
+		}
+
+
+		#client-section
+		{
+			height: 250px;
+		}
+		#client-section::before
+		{
+			height: 215px;
+		}
+
+
+		.contact-box form
+		{
+			width: 280px;
+		}
+	}
+
+										/*responsive code ends here*/
+										
+	</style>
+</head>
+<body>
+
+									<!-- navbar start here -->
+	<nav id="navbar">
+		<div id="logo">
+			<img id="loImg" src="img/food.jpg">
+		</div>
+		<ul>
+			<li class="item"> <a href="#home">Home</a> </li>
+			<li class="item"> <a href="#services">Services</a> </li>
+			<li class="item"> <a href="#client-section">Client</a> </li>
+			<li class="item"> <a href="#contact">Contact Us</a> </li>
+		</ul>
+	</nav>
+
+										<!-- navbar end here -->
+
+
+										<!-- section start here -->
+
+
+	<section id="home">
+		<h1 class="h-primary">Welcome To SkjMeal</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut la qui officia deserunt mollit anim id est laborum.</p>
+		
+<!-- 
+		<p>Lorem ipsum dolor si qui officia deserunt mollit anim id est laborum.</p> -->
+
+		<button type="submit" class="btn">Order Now</button>
+	</section>
+
+										<!-- section end here -->
+
+
+
+										<!-- services section start here -->
+
+	<section id="services">
+		<h1 class="h-primary" style="text-align: center;">Our Services</h1>
+		<div class="service">
+			<div class="box">
+				<img src="img/img3.jpg">
+				<h2 class="h-secondary">Food Ordering</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="box">
+				<img src="img/img2.jpg">
+				<h2 class="h-secondary">Food Catering</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="box">
+				<img src="img/img6.jpg">
+				<h2 class="h-secondary">Bulk Ordering</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+	</section>
+
+										<!-- services section ends here -->
+
+
+										<!-- client section start here -->
+
+
+	<section id="client-section">
+		<h2 class="h-primary">Our Clients</h2>
+		<div id="clients">	
+			<div class="client-item">
+				<img src="img/img2.jpg">
+			</div>
+			<div class="client-item">
+				<img src="img/img3.jpg">
+			</div>
+			<div class="client-item">
+				<img src="img/img4.jpg">
+			</div>
+			<div class="client-item">
+				<img src="img/img1.jpg">
+			</div>
+		</div>
+	</section>
+
+										<!-- client section ends here-->
+
+
+										<!-- form section start here -->
+
+	<section id="contact">
+		<h1 class="h-primary" style="text-align: center;">Contact Here</h1>
+		<div class="contact-box">
+			<form action="">
+				<div class="form-group">
+					<label for="name">Name : </label>
+					<input type="text" name="name" placeholder="Enter Your name">
+				</div>
+				<div class="form-group">
+					<label for="conname">Contact Number : </label>
+					<input type="phone" name="conname" placeholder="Enter Your Contact Number">
+				</div>
+				<div class="form-group">
+					<label for="email">Email : </label>
+					<input type="email" name="email" placeholder="Enter Your Email">
+				</div>
+				<div class="form-group">
+					<label for="message">Message : </label>
+					<textarea name="message" rows="7"></textarea> 
+				</div>			
+			</form>
+		</div>
+	</section>
+
+										<!-- form section ends here -->
+
+										<!-- footer here -->
+
+	<footer>
+		<div>
+			Copyright &copy; WWW.SkjMeal.com All rights reserved!
+		</div>
+	</footer>
+
+										<!-- footer ends -->
+
+</body>
+</html>
